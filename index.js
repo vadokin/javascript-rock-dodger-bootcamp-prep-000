@@ -12,11 +12,6 @@ const START = document.getElementById('start')
 
 var gameInterval = null
 
-/**
- * Be aware of what's above this line,
- * but all of your work should happen below.
- */
-
 function checkCollision(rock) {
   const top = positionToInteger(rock.style.top)
 
