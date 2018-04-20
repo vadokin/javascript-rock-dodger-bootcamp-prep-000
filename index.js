@@ -58,7 +58,7 @@ function createRock(x) {
   rock.style.left = `${x}px`
 
   // Hmmm, why would we have used `var` here?
-  var top = 0
+  let top = 0
 
   rock.style.top = top
 
@@ -66,6 +66,7 @@ function createRock(x) {
    * Now that we have a rock, we'll need to append
    * it to GAME and move it downwards.
    */
+   GAME.append(rock)
 
 
   /**
@@ -111,30 +112,68 @@ function endGame() {
 }
 
 function moveDodger(e) {
-  // implement me!
-  /**
-   * This function should call `moveDodgerLeft()`
-   * if the left arrow is pressed and `moveDodgerRight()`
-   * if the right arrow is pressed. (Check the constants
-   * we've declared for you above.)
-   * And be sure to use the functions declared below!
-   */
+  if (e.which === LEFT_ARROW) {
+     moveDodgerLeft()
+     e.stopPropagation()
+     e.preventDefault()
+  }
+  if (e.which === RIGHT_ARROW) {
+    moveDodgerRight()
+    e.stopPropagation()
+    e.preventDefault()
+  }
 }
 
+// function moveDodgerLeft() {  // continuous left on touch
+//    let leftNumbers = DODGER.style.left.replace('px', '')
+//    let left = parseInt(leftNumbers, 10)
+//
+//    function step() {
+//      DODGER.style.left = `${left -= 4}px`
+//      if (left > 0) {
+//        window.requestAnimationFrame(step)
+//      }
+//    }
+//    window.requestAnimationFrame(step)
+// }
+
+// function moveDodgerRight() { // continuous right on touch
+//    let leftNumbers = DODGER.style.left.replace('px', '')
+//    let left = parseInt(leftNumbers, 10)
+//
+//    function step() {
+//      DODGER.style.left = `${left += 4}px`
+//      if (left < GAME_WIDTH - 40) {
+//        window.requestAnimationFrame(step)
+//      }
+//    }
+//    window.requestAnimationFrame(step)
+// }
+
 function moveDodgerLeft() {
-  // implement me!
-  /**
-   * This function should move DODGER to the left
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
+  let leftNumbers = DODGER.style.left.replace('px', '')
+  let left = parseInt(leftNumbers, 10)
+
+  function step() {
+    DODGER.style.left = `${left -= 4}px`
+  }
+
+  if (left > 0) {
+    window.requestAnimationFrame(step)
+  }
 }
 
 function moveDodgerRight() {
-  // implement me!
-  /**
-   * This function should move DODGER to the right
-   * (mabye 4 pixels?). Use window.requestAnimationFrame()!
-   */
+  let leftNumbers = DODGER.style.left.replace('px', '')
+  let left = parseInt(leftNumbers, 10)
+
+  function step() {
+    DODGER.style.left = `${left += 4}px`
+  }
+
+  if (left < GAME_WIDTH - 40) {
+    window.requestAnimationFrame(step)
+  }
 }
 
 /**
