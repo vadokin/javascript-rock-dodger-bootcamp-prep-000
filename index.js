@@ -65,16 +65,11 @@ function createRock(x) {
   rock.className = 'rock'
   rock.style.left = `${x}px`
 
-  // Hmmm, why would we have used `var` here?
   let top = 0
 
   rock.style.top = top
 
-  /**
-   * Now that we have a rock, we'll need to append
-   * it to GAME and move it downwards.
-   */
-   GAME.appendChild(rock)
+  GAME.appendChild(rock)
 
 
   /**
