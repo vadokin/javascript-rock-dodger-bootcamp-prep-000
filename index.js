@@ -34,24 +34,15 @@ function checkCollision(rock) {
 
 function createRock(x) {
   const rock = document.createElement('div')
+  let top = 0
 
   rock.className = 'rock'
   rock.style.left = `${x}px`
-
-  let top = 0
-
   rock.style.top = `${top}px`
 
   GAME.appendChild(rock)
 
   function moveRock() {
-    // implement me!
-    // (use the comments below to guide you!)
-    /**
-     * If a rock collides with the DODGER,
-     * we should call endGame()
-     */
-    //  rock.style.top = `${top += 2}px`
 
      function step() {
        return rock.style.top = `${top += 2}px`
