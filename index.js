@@ -86,7 +86,7 @@ function createRock(x) {
      } else if (rock) {
 
      } else {
-       
+       rock.remove()
      }
 
 
