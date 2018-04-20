@@ -45,7 +45,7 @@ function createRock(x) {
 
   let top = 0
 
-  rock.style.top = top
+  rock.style.top = `${top}px`
 
   GAME.appendChild(rock)
 
