@@ -51,8 +51,8 @@ function checkCollision(rock) {
                */
     if (rockLeftEdge < dodgerLeftEdge) {
       return true
-    } else if (true) {
-      
+    } else if (rockLeftEdge > ) {
+
     }
   }
 }
@@ -185,7 +185,7 @@ function moveDodgerRight() {
     DODGER.style.left = `${left += 4}px`
   }
 
-  if (left < GAME_WIDTH - 40) {
+  if (left < 360) {
     window.requestAnimationFrame(step)
   }
 }
