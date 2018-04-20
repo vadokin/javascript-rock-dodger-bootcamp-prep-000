@@ -62,7 +62,6 @@ function createRock(x) {
 
   ROCKS.push(rock)
 
-  // Finally, return the rock element you've created
   return rock
 }
 
