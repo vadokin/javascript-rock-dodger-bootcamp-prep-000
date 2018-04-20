@@ -109,7 +109,7 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
-  clearInterval()
+  clearInterval(gameInterval)
 }
 
 function moveDodger(e) {
