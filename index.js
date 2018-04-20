@@ -86,32 +86,6 @@ function moveDodger(e) {
   }
 }
 
-// function moveDodgerLeft() {  // continuous left on touch
-//    let leftNumbers = DODGER.style.left.replace('px', '')
-//    let left = parseInt(leftNumbers, 10)
-//
-//    function step() {
-//      DODGER.style.left = `${left -= 4}px`
-//      if (left > 0) {
-//        window.requestAnimationFrame(step)
-//      }
-//    }
-//    window.requestAnimationFrame(step)
-// }
-
-// function moveDodgerRight() { // continuous right on touch
-//    let leftNumbers = DODGER.style.left.replace('px', '')
-//    let left = parseInt(leftNumbers, 10)
-//
-//    function step() {
-//      DODGER.style.left = `${left += 4}px`
-//      if (left < GAME_WIDTH - 40) {
-//        window.requestAnimationFrame(step)
-//      }
-//    }
-//    window.requestAnimationFrame(step)
-// }
-
 function moveDodgerLeft() {
   let leftNumbers = DODGER.style.left.replace('px', '')
   let left = parseInt(leftNumbers, 10)
