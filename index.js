@@ -79,7 +79,8 @@ function createRock(x) {
          rock.remove()
        }
      }
-     
+
+     window.requestAnimationFrame(step)
 
 
     //  if (checkCollision(rock)) {
