@@ -59,7 +59,6 @@ function createRock(x) {
   }
 
   moveRock()
-
   ROCKS.push(rock)
 
   return rock
