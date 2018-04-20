@@ -81,6 +81,7 @@ function createRock(x) {
      * we should call endGame()
      */
 
+
     /**
      * Otherwise, if the rock hasn't reached the bottom of
      * the GAME, we want to move it again.
@@ -102,12 +103,6 @@ function createRock(x) {
   return rock
 }
 
-/**
- * End the game by clearing `gameInterval`,
- * removing all ROCKS from the DOM,
- * and removing the `moveDodger` event listener.
- * Finally, alert "YOU LOSE!" to the player.
- */
 function endGame() {
   clearInterval(gameInterval)
   for (let i = 0, len = ROCKS.length; i < len; i++) {
